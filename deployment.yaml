@@ -4,6 +4,7 @@ metadata:
   labels:
     app: my-argo-demo
   name: choney-deploy
+  namespace: choney
 spec:
   replicas: 2
   selector:
