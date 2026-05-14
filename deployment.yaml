@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: my-argo-demo
-  name: choney-deploy
-  #namespace: choney
+ name: webappnew
 spec:
-  replicas: 4
-  selector:
-    matchLabels:
-      app: choney-deploy
-  template:
-    metadata:
-      labels:
-        app: choney-deploy
-    spec:
-      containers:
-      - image: quay.io/gauravkumar9130/nginxdemo
-        name: pet
+ replicas: 3
+ selector:
+  matchLabels:
+   app: nginx
+ template:
+  metadata:
+   labels:
+    app: nginx
+  spec:
+   containers:
+   - name: nginx
+     image: nginx:latest
+     ports:
+     - containerPort: 80
