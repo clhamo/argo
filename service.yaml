@@ -1,15 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: choney-deploy
-  name: choney-svc
-  #namespace: choney
+ name: nginx-service
 spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: choney-deploy
-  type: NodePort
+ type: ClusterIP
+ ports:
+ - port: 80
+   targetPort: 80
+ selector:
+  app: nginx
