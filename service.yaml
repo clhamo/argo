@@ -4,7 +4,7 @@ metadata:
   labels:
     app: choney-deploy
   name: choney-svc
-  namespace: choney
+  #namespace: choney
 spec:
   ports:
   - port: 8080
