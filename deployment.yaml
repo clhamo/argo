@@ -15,5 +15,5 @@ spec:
         app: choney-deploy
     spec:
       containers:
-      - image: clhamo/rabbit:11
+      - image: quay.io/gauravkumar9130/nginxdemo
         name: pet
